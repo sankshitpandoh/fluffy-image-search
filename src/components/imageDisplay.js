@@ -9,6 +9,7 @@ class ImageDisplay extends React.Component{
             return <SingleImageItem data = {x} key={index} />
         })
         return(
+            <>
             <div className="image-display">
                 {this.props.loading ? 
                     <Loader />
@@ -16,6 +17,11 @@ class ImageDisplay extends React.Component{
                     items   
                 }
             </div>
+            <div className="button-container">
+                <button onClick ={this.props.prevPage} disabled ={this.props.page === 1}>Prev</button>
+                <button onClick={this.props.nextPage}>Next</button>
+            </div>
+            </>
         )
     }
 }

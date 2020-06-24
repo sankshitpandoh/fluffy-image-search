@@ -21,7 +21,7 @@ class SingleImageItem extends React.Component{
                         <Loader />
                     </div>
                 }
-                <a href={this.props.data.largeImageURL} target ="_blank">
+                <a href={this.props.data.largeImageURL} target ="_blank" rel="noopener noreferrer">
                 <img src={this.props.data.webformatURL} onLoad ={this.handleImageLoad} alt="single-result" />
                 </a>
             </div>

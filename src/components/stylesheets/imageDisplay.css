@@ -4,3 +4,15 @@
     justify-content: center;
     background-color: #fff;
 }
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.button-container button{
+    margin: 0 5px;
+}
+.button-container button:disabled{
+    cursor: not-allowed;
+}

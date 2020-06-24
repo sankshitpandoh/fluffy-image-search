@@ -10,14 +10,26 @@ class App extends React.Component{
 
   state={
     receivedData: [],
-    loading: false
+    searchParam: "",
+    loading: false,
+    page: 1
   }
 
-  search = async(searchParam) => {
+  setSearchParam = (x) => {
+    x.length !== 0 &&
+    this.setState({
+      searchParam: x,
+      page: 1
+    }, () => {
+      this.search()
+    })
+  }
+
+  search = async() => {
     this.setState({
       loading: true
     }, () => {
-      let url = API + searchParam + "&image_type=photo&pretty=true";
+      let url = API + this.state.searchParam + "&image_type=photo&pretty=true" + this.state.page;
       fetch(url)
       .then((res) => res.json())
       .then ((data) => {
@@ -33,12 +45,28 @@ class App extends React.Component{
     })
   }
 
+  nextPage = () =>{
+    this.setState({
+      page: this.state.page + 1
+    }, () => {
+      this.search()
+    })
+  }
+
+  prevPage = () => {
+    this.setState({
+      page: this.state.page - 1
+    }, () => {
+      this.search()
+    })
+  }
+
   render(){
     return(
       <>
-      <SearchBar search={this.search} />
+      <SearchBar setSearchParam={this.setSearchParam} />
       {this.state.receivedData.length !== 0 &&
-        <ImageDisplay data = {this.state.receivedData.hits} loading = {this.state.loading} />
+        <ImageDisplay data = {this.state.receivedData.hits} loading = {this.state.loading} page = {this.state.page} nextPage ={this.nextPage} prevPage = {this.prevPage} />
       }
       </>
     )
