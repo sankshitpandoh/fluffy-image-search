@@ -12,6 +12,7 @@
 }
 .button-container button{
     margin: 0 5px;
+    cursor: pointer;
 }
 .button-container button:disabled{
     cursor: not-allowed;

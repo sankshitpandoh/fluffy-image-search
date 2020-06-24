@@ -20,7 +20,7 @@ class SearchBar extends React.Component{
     render(){
         return(
             <div className = "search-bar">
-                <input onKeyDown ={this.handleKeyDown} type="text" value={this.state.searchInput} onChange={this.handleSearchInput} />
+                <input onKeyDown ={this.handleKeyDown} type="text" value={this.state.searchInput} onChange={this.handleSearchInput} placeholder="Search here" />
                 <button onClick={() => {this.props.setSearchParam(this.state.searchInput)}}>Search</button>
             </div>
         )

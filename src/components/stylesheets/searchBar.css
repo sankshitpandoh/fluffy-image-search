@@ -2,26 +2,27 @@
     display: flex;
     padding: 10px 0px;
     justify-content: center;
-    background-color: #468C98;
+    background-color: #000;
     margin-bottom: 15px;
 }
 .search-bar input{
     background-color: transparent;
     border: 0;
     color: #fff;
-    border-bottom: 2px solid #101419;
+    border-bottom: 1px solid yellow;
     width: 30%;
 }
 .search-bar button{
     margin-left: 25px;
-    background-color: #101419 ;
+    background-color: #fff ;
     border: 0;
-    padding: 5px 10px;
-    color: #fff;
+    padding: 5px 20px;
+    color: #000;
     cursor: pointer;
     transition: 0.5s all;
+    border-radius: 5px;
 }
 .search-bar button:hover{
-    background-color: #fff;
-    color: #101419;
+    background-color: #101419;
+    color: #fff;
 }
