@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import SearchBar from './components/searchBar.js';
 import ImageDisplay from './components/imageDisplay.js';
+import Home from './components/home';
 
 const API = "https://pixabay.com/api/?key=17161981-90d466c25acd7e27181ed309f&q="
 
@@ -65,8 +66,10 @@ class App extends React.Component{
     return(
       <>
       <SearchBar setSearchParam={this.setSearchParam} />
-      {this.state.receivedData.length !== 0 &&
+      {this.state.receivedData.length !== 0 ?
         <ImageDisplay data = {this.state.receivedData.hits} loading = {this.state.loading} page = {this.state.page} nextPage ={this.nextPage} prevPage = {this.prevPage} />
+        :
+        <Home />
       }
       </>
     )
