@@ -6,6 +6,11 @@ class SearchBar extends React.Component{
         searchInput : ""
     }
 
+    handleKeyDown = (e) => {
+        e.key === 'Enter' &&
+        this.props.setSearchParam(this.state.searchInput);
+    }
+
     handleSearchInput = (e) => {
         this.setState({
             searchInput: e.target.value
@@ -15,7 +20,7 @@ class SearchBar extends React.Component{
     render(){
         return(
             <div className = "search-bar">
-                <input type="text" value={this.state.searchInput} onChange={this.handleSearchInput} />
+                <input onKeyDown ={this.handleKeyDown} type="text" value={this.state.searchInput} onChange={this.handleSearchInput} />
                 <button onClick={() => {this.props.setSearchParam(this.state.searchInput)}}>Search</button>
             </div>
         )
