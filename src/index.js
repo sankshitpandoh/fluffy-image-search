@@ -30,7 +30,7 @@ class App extends React.Component{
     this.setState({
       loading: true
     }, () => {
-      let url = API + this.state.searchParam + "&image_type=photo&pretty=true" + this.state.page;
+      let url = API + this.state.searchParam + "&image_type=photo&pretty=true&page=" + this.state.page;
       fetch(url)
       .then((res) => res.json())
       .then ((data) => {
