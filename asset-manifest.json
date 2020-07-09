@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/fluffy-image-search/static/css/main.86a51ff8.chunk.css",
+    "main.js": "/fluffy-image-search/static/js/main.5233e41a.chunk.js",
+    "main.js.map": "/fluffy-image-search/static/js/main.5233e41a.chunk.js.map",
+    "runtime-main.js": "/fluffy-image-search/static/js/runtime-main.fd799dd6.js",
+    "runtime-main.js.map": "/fluffy-image-search/static/js/runtime-main.fd799dd6.js.map",
+    "static/js/2.b36a7a99.chunk.js": "/fluffy-image-search/static/js/2.b36a7a99.chunk.js",
+    "static/js/2.b36a7a99.chunk.js.map": "/fluffy-image-search/static/js/2.b36a7a99.chunk.js.map",
+    "index.html": "/fluffy-image-search/index.html",
+    "precache-manifest.b5b91bd7c5f0150a974f6052cf5d837f.js": "/fluffy-image-search/precache-manifest.b5b91bd7c5f0150a974f6052cf5d837f.js",
+    "service-worker.js": "/fluffy-image-search/service-worker.js",
+    "static/css/main.86a51ff8.chunk.css.map": "/fluffy-image-search/static/css/main.86a51ff8.chunk.css.map",
+    "static/js/2.b36a7a99.chunk.js.LICENSE.txt": "/fluffy-image-search/static/js/2.b36a7a99.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fd799dd6.js",
+    "static/js/2.b36a7a99.chunk.js",
+    "static/css/main.86a51ff8.chunk.css",
+    "static/js/main.5233e41a.chunk.js"
+  ]
+}
